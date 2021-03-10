@@ -1,0 +1,47 @@
+.editor-leftNavToolBar {
+    position: fixed;
+    width: 100px;
+    height: auto;
+    left: 10px;
+    z-index: 10000;
+}
+
+.editor-leftNavToolBar li {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 2px 2px 4px 1px rgb(44, 44, 44);
+    text-align: left;
+    margin-top: 10px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.editor-leftNavToolBar li:hover {
+    background-color: coral;
+}
+
+.editor-leftNavToolBar li svg {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+/* preview close btn do not display */
+.editor-leftNavToolBar li:nth-last-child(3) svg:nth-last-child(2) {
+    display: none;
+}
+
+.editor-leftNavToolBar li span {
+    display: block;
+    float: left;
+    margin-left: 18px;
+}

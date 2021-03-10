@@ -1,0 +1,1511 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/*定义滚动条高宽及背景
+ 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 4px;
+    height: 16px;
+    background: linear-gradient(coral 40%, #000 20%, coral 40%);
+    /* background-color: #000000; */
+}
+
+/*定义滚动条轨道
+  内阴影+圆角*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+/*定义滑块
+  内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background: linear-gradient(45deg, #fff, coral, orange, coral, #fff);
+}
+
+.kok-container {
+    width: 90%;
+    margin: 0 auto;
+    /* background-color: cornsilk; */
+}
+
+.kok-container-full {
+    width: 100%;
+}
+
+.kok-container-80percent {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.kok-container-70percent {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.kok-animation-tremble {
+    animation: tremble 0.3s ease;
+}
+
+@keyframes tremble {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(-5deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.kok-alertSmall {
+    display: block;
+    position: relative;
+    width: 240px;
+    height: auto;
+    padding: 4px 12px 6px;
+    text-align: center;
+    margin: 200px auto;
+    color: coral;
+    border-radius: 7px;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 10px 1px #888888;
+}
+
+.kok-alertSmall h3 {
+    padding-bottom: 6px;
+    border-bottom: 1px solid coral;
+}
+
+.kok-alertSmall button {
+    margin-left: 20px;
+    border: none;
+    border-left: 1px solid coral;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kok-alertSmall button:hover {
+    transform: translateY(-3px);
+    background-color: coral;
+}
+
+/* kok-article --- start*/
+.kok-article {
+    display: block;
+    position: relative;
+    margin: 10px auto;
+    width: 62%;
+    line-height: 1.5rem;
+    text-indent: 2rem;
+    font-family: 宋体, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: rgba(248, 248, 248, 1);
+    box-shadow: 2px 2px 10px #888;
+    z-index: 1;
+}
+
+.kok-article .kok-article-content {
+    padding: 0px 4px;
+}
+
+.kok-article .kok-article-content>p {
+    padding: 0px 0px 0px 8px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.kok-article .kok-article-content>.kok-article-img {
+    display: block;
+    position: relative;
+    max-width: 40%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+.kok-article .kok-article-content .kok-article-img-small {
+    display: block;
+    position: relative;
+    max-width: 20%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+.kok-article-part1 {
+    margin: 10px 4px;
+    border-left: 4px solid rgb(0, 153, 255);
+}
+
+.kok-article-part2 {
+    margin: 10px 4px;
+    border-left: 4px solid sandybrown;
+    /* border-bottom: 1px solid sandybrown; */
+}
+
+.kok-article-part3 {
+    margin: 4px 0px;
+    border-left: 4px solid #ccc;
+    /* border-bottom: 1px solid sandybrown; */
+}
+
+.kok-article .kok-article-dir {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 236px;
+    max-width: 236px;
+    max-height: 400px;
+    font-size: 12px;
+    font-weight: bolder;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #e9e9e9;
+    box-shadow: 2px 2px 10px #888;
+    overflow-y: scroll;
+}
+
+
+.kok-article .kok-article-dir ul {
+    /* margin-left: -10px; */
+    border-left: 2px solid springgreen;
+}
+
+.kok-article .kok-article-dir li {
+    list-style-type: decimal-leading-zero;
+    margin-left: -10px;
+    text-align: left;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.kok-article .kok-article-dir li:hover {
+    color: aqua;
+    background-color: black;
+}
+
+.kok-article .kok-article-summary {
+    margin-left: 4px;
+    background-color: burlywood;
+}
+
+.kok-article [class^=kok-article-title] {
+    display: block;
+    width: fit-content;
+    margin: 8px 4px;
+    padding: 4px 8px;
+    text-indent: 0;
+    color: black;
+    font-size: 28px;
+    font-weight: bolder;
+    line-height: 28px;
+    border-radius: 4px;
+    border-bottom: 1px solid black;
+    /* background-color: rgba(97, 97, 97,0.6); */
+}
+
+.kok-article .kok-article-title {
+    display: block;
+    position: relative;
+    width: 98%;
+    text-indent: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: black;
+    font-size: 28px;
+    font-weight: bolder;
+    line-height: 28px;
+    padding-bottom: 8px;
+    border-radius: 0px;
+    border-left: 4px solid black;
+    border-bottom: none;
+}
+
+.kok-article .kok-article-title svg {
+    margin-right: 8px;
+}
+
+.kok-article .kok-article-title1 {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-left: 0.5em;
+}
+
+.kok-article .kok-article-title2 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 1em;
+}
+
+.kok-article .kok-article-title3 {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: 1em;
+}
+
+.kok-article .kok-article-list {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.kok-article .kok-article-footer {
+    position: relative;
+    display: block;
+    text-indent: 0px;
+    height: 24px;
+    font-size: 10px;
+    color: black;
+}
+
+.kok-article .kok-article-footer span {
+    display: block;
+    float: left;
+    width: fit-content;
+    padding: 0px 4px;
+    font-size: inherit;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.kok-article .kok-article-footer span:first-child {
+    background-color: rgba(204, 204, 204, 0.9);
+}
+
+.kok-article .kok-article-footer span:last-child {
+    background-color: rgba(245, 160, 111, 0.9);
+}
+
+/* kok-article --- end*/
+
+.kok-avator-small {
+    margin-top: -4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+[class^="kok-button-"] {
+    width: fit-content;
+    height: 22px;
+    padding: 2px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+[class^="kok-button-"]:hover {
+    box-shadow: 1px 1px 2px #888;
+}
+
+[class^="kok-button-"]:focus {
+    outline: none;
+}
+
+.kok-button-dark {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+}
+
+.kok-button-coral {
+    color: #fff;
+    background-color: coral;
+    border: 1px solid #fff;
+}
+
+.kok-img {
+    border-radius: 12px;
+    box-shadow: 1px 1px 4px rgb(0, 0, 0);
+    transition: all 0.3s;
+}
+
+.kok-img:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px rgb(255, 255, 255);
+}
+
+/* kok card  */
+
+.kok-card {
+    position: relative;
+    min-height: 100px;
+    min-width: 100px;
+    width: 260px;
+    height: 200px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.84);
+    overflow: hidden;
+}
+
+.kok-card .kok-card-description {
+    color: #fff;
+    background-color: black;
+    text-align: center;
+    padding: 4px;
+}
+
+.kok-card img {
+    width: 100%;
+}
+
+/* kok cart item  */
+.kok-cartItem {
+    position: relative;
+    height: 70px;
+    background-color: #fff;
+}
+
+.kok-cartItem .cartDetail {
+    text-align: center;
+}
+
+.kok-cartItem .cartDetail .goodsDetail {
+    text-align: left;
+    height: 60px;
+    line-height: 0px;
+}
+
+.kok-cartItem .cartDetail .cartGoodsImage {
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.kok-cartItem .cartDetail .goodsDetail .goodsTitle {
+    display: block;
+}
+
+.kok-cartItem .cartDetail .goodsDetail .extraInfo {
+    color: coral;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 2px 4px;
+    background-color: rgba(255, 127, 80, 0.2);
+}
+
+.kok-cartItem .cartDetail .goodsDetail .priceInfo {
+    color: coral;
+    font-size: 12px;
+    font-weight: bolder;
+    border-radius: 3px;
+    padding: 2px 4px;
+    background-color: rgba(255, 127, 80, 0.2);
+}
+
+.kok-cartItem .cartNum {
+    text-align: center;
+    line-height: 60px;
+}
+
+.kok-cartItem .cartNum .cartNumMinus,
+.kok-cartItem .cartNum .cartNumPlus {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-weight: bolder;
+    padding: 2px 10px;
+    font-weight: bolder;
+    border: 1px solid #000;
+    user-select: none;
+    cursor: pointer;
+}
+
+.kok-cartItem .cartNum .cartNumMinus {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 0px;
+}
+
+.kok-cartItem .cartNum .cartNumPlus {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 6px;
+}
+
+.kok-cartItem .cartNum .cartNumCount {
+    min-width: 28px;
+    padding: 2px 10px;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.kok-cartItem .cartNum .cartNumMinus:hover,
+.kok-cartItem .cartNum .cartNumPlus:hover {
+    box-shadow: 1px 1px 2px #000;
+}
+
+.kok-cartItem .kok-delete {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: -25px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+}
+
+.kok-cartItem .kok-delete:hover {
+    background-color: coral;
+}
+
+/* grid */
+.kok-col-row {
+    display: block;
+}
+
+.kok-col-row [class^="kok-col"] {
+    float: left;
+}
+
+.kok-col-row .kok-col-4 {
+    width: 30%;
+}
+
+.kok-col-row .kok-col-8 {
+    width: 70%;
+}
+
+
+.kok-col-row .kok-col-2 {
+    width: 50%;
+}
+
+.kok-col-row .kok-col-sm {
+    width: 33.3%;
+}
+
+.kok-col-row .kok-col-auto {
+    width: 12%;
+    margin-top: 18px;
+    margin-left: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*-- clear float -- */
+.kok-col-row .kok-col-auto:before,
+.kok-col-row .kok-col-auto:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* kok input component */
+.kok-input-search {
+    height: 24px;
+    border-radius: 16px;
+    padding: 2px 8px;
+    outline: none;
+}
+
+#kok-refresh {
+    position: fixed;
+    top: 48vh;
+    right: 10px;
+    transition: all ease-in-out 1.2s;
+    cursor: pointer;
+    z-index: 666;
+}
+
+/* #kok-refresh:hover {
+    transform: rotate(720deg);
+} */
+
+.kok-video {
+    cursor: pointer;
+}
+
+.kok-bk {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    /* Safari and Chrome */
+    perspective: 150;
+    -webkit-perspective: 800;
+    /* Safari and Chrome */
+    z-index: 9999;
+}
+
+
+.kok-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    /* Safari and Chrome */
+    perspective: 150;
+    -webkit-perspective: 800;
+    /* Safari and Chrome */
+    z-index: 9999;
+}
+
+
+.kok-menu .kok-menu-left {
+    position: fixed;
+    left: -16%;
+    width: 450px;
+    height: 450px;
+    top: 20%;
+    transform: rotate3d(1, 1, 0, -15deg);
+    background-color: rgba(210, 105, 30, 0.84);
+    box-shadow: 1px 1px 14px rgb(255, 255, 255);
+    z-index: 999;
+}
+
+.kok-menu .kok-menu-right {
+    position: fixed;
+    right: -16%;
+    width: 450px;
+    height: 450px;
+    top: 20%;
+    transform: rotate3d(1, 1, 0, 15deg);
+    background-color: rgba(210, 105, 30, 0.84);
+    box-shadow: 1px 1px 14px #fff;
+    z-index: 999;
+}
+
+.kok-menu .kok-menu-center {
+    display: none;
+}
+
+.kok-menu .kok-menu-button1 {
+    display: block;
+    height: 40px;
+    width: 600px;
+    margin-top: 84px;
+    color: coral;
+    letter-spacing: 0.5em;
+    border-radius: 8px;
+    font-weight: bolder;
+    padding: 4px;
+    text-align: right;
+    background-color: black;
+    border-bottom: 2px solid cyan;
+    transform: rotate3d(0, 1, 0, -10deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.kok-menu .kok-menu-button1:hover {
+    color: black;
+    background-color: chocolate;
+    box-shadow: 2px 2px 12px #fff;
+    transform: rotate3d(0, 1, 0, -30deg) translateX(150px);
+}
+
+.kok-menu .kok-menu-button2 {
+    display: block;
+    float: right;
+    height: 40px;
+    width: 600px;
+    margin-top: 82px;
+    margin-right: 10px;
+    color: coral;
+    letter-spacing: 0.5em;
+    border-radius: 8px;
+    font-weight: bolder;
+    padding: 4px;
+    text-align: left;
+    background-color: black;
+    border-bottom: 2px solid cyan;
+    transform: rotate3d(0, 1, 0, -10deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.kok-menu .kok-menu-button2:hover {
+    color: black;
+    background-color: chocolate;
+    box-shadow: 2px 2px 12px #fff;
+    transform: rotate3d(0, 1, 0, -30deg) translateX(-150px);
+}
+
+.kok-menu .kok-menu-close {
+    position: fixed;
+    width: 0;
+    height: 0;
+    left: 43%;
+    border: 100px solid chocolate;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-top: 100px solid transparent;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.kok-menu .kok-menu-close svg {
+    margin-top: 40px;
+    margin-left: -23px;
+    transition: all 0.3s ease-in-out;
+}
+
+.kok-menu .kok-menu-close:hover svg {
+    color: tomato;
+    transform: rotate(90deg);
+}
+
+
+/*=============================================
+	=    		 navication Setting			      =
+=============================================*/
+.kok-navication {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    height: 44px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 14px #ccc;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.kok-navication-bottom {
+    max-width: 100%;
+    height: 44px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 14px #ccc;
+    z-index: 10000;
+}
+
+
+.kok-navication-bottom .centerPart {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.kok-navication-bottom .centerPart li {
+    flex: 1;
+    display: inline-block;
+    width: fit-content;
+    line-height: 44px;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.kok-navication-bottom .centerPart li:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.kok-navication-bottom .centerPart li:hover svg path {
+    fill: #fff;
+}
+
+/*=============================================
+	=    		 leftPart and rightPart Setting			      =
+=============================================*/
+
+[class^="kok-navication"] {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+
+[class^="kok-navication"] .leftPart {
+    float: left;
+    margin-top: 0px;
+    padding: 0;
+}
+
+[class^="kok-navication"] .rightPart {
+    float: right;
+    padding: 0;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+[class^="kok-navication"] .leftPart li,
+[class^="kok-navication"] .rightPart li {
+    display: inline-block;
+    width: fit-content;
+    padding: 0 10px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/*=============================================
+	=    		 left bottom Text Setting			      =
+=============================================*/
+.kok-leftBottomText {
+    position: fixed;
+    left: 10px;
+    bottom: 4px;
+    padding: 4px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    color: #fff;
+    z-index: 1000;
+}
+
+.kok-avator-small {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgb(92, 92, 92);
+}
+
+.kok-avator-middle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid rgb(92, 92, 92);
+}
+
+.kok-avator-big {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid coral;
+}
+
+.kok-searchInput {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.kok-poster {
+    color: coral;
+    background-color: black;
+}
+
+.kok-bigShade {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+#kok-topRocket {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 666;
+}
+
+/* kok iframe  */
+.kok-iframe-big {
+    width: 100vw;
+    height: 100%;
+}
+
+.kok-iframe-middle {
+    width: 80%;
+    height: 80%;
+}
+
+.kok-iframe-small {
+    width: 40%;
+    height: 40%;
+}
+
+[class^="kok-iframe-"] {
+    transition: all 0.3s ease;
+}
+
+.kok-circleBubble {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.kok-font-coral {
+    color: coral !important;
+}
+
+.kok-font-black {
+    color: black !important;
+}
+
+.kok-font-cyan {
+    color: cyan !important;
+}
+
+.kok-font-gray {
+    color: gray !important;
+}
+
+.kok-font-pink {
+    color: pink !important;
+}
+
+.kok-font-wihte {
+    color: white !important;
+}
+
+/* personal profile */
+.kok-profile {
+    position: fixed;
+    width: 260px;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid coral;
+    box-shadow: 1px 1px 10px 1px #888888;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.kok-profile .kok-profileListLi {
+    display: block;
+    width: 250px;
+    height: 30px;
+    float: left;
+    padding: 5px;
+    text-overflow: ellipsis;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+.kok-profile .kok-profileListLi:not(:first-child):hover {
+    background-color: coral;
+}
+
+.kok-profile .kok-profileListLi:first-child {
+    height: auto;
+    cursor: auto;
+}
+
+.kok-profile .kok-profileListLi:nth-child(2) {
+    height: auto;
+}
+
+.kok-profile .kok-profileListLi:nth-child(2) .kok-divMask {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.kok-profile .kok-profileListLi info {
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: rgba(136, 136, 136, 0.2);
+}
+
+.kok-profile .kok-profileListLi:nth-child(2) info {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    background-color: rgba(136, 136, 136, 0);
+}
+
+.kok-profile .kok-profileListLi .kok-avator-middle {
+    display: block;
+    float: left;
+}
+
+
+.kok-profile .kok-profileListLi .kok-profileUsername {
+    display: block;
+    float: left;
+    width: 70%;
+    margin-left: 4%;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.kok-profile .kok-profileListLi .kok-profileUserPosition {
+    display: block;
+    float: left;
+    width: 70%;
+    margin-left: 4%;
+    font-size: 14px;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+
+.kok-profile .kok-profileListLi .kok-profileIcon {
+    display: block;
+    float: left;
+    width: 24px;
+    height: 30px;
+    margin-left: 5%;
+}
+
+.kok-profile .kok-profileListLi .kok-profileItem {
+    display: block;
+    float: left;
+    width: 70%;
+    margin-left: 4%;
+    line-height: 30px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+.kok-profile .kok-profileListLi .kok-profileIcon svg {
+    position: relative;
+    top: 4px;
+}
+
+/* 3d */
+.kok-rotate3d-x {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    /* Safari 与 Chrome */
+    transition: all ease-in-out 0.7s;
+    animation: kok-rotate3d-x ease-in-out 1000ms;
+}
+
+.kok-list {}
+
+.kok-list .kok-list-head {
+    display: block;
+    padding: 8px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2px;
+}
+
+.kok-list .kok-list-line {
+    display: block;
+    height: auto;
+    padding: 4px 8px;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.kok-list .kok-list-line:nth-of-type(odd) {
+    background-color: #ccc;
+}
+
+.kok-maskLayer {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    /* 998 is for show this top nav 999 layer more high than 998*/
+    z-index: 9999;
+}
+
+.kok-signChoose {
+    display: block;
+    width: 260px;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(68, 68, 68);
+    border-radius: 4px;
+    border: 1px solid coral;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.kok-signChoose h2 {
+    text-align: center;
+    color: coral;
+}
+
+.kok-signChoose li {
+    position: relative;
+    display: inline-block;
+    width: 44%;
+    height: 40px;
+    padding-top: 6px;
+    margin-left: 3%;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.kok-signChoose li:hover {
+    box-shadow: 2px 2px 10px rgb(158, 158, 158);
+}
+
+.kok-signChoose img {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 16px;
+}
+
+.kok-signUp,
+.kok-signIn {
+    position: relative;
+    display: block;
+    width: 340px;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    font-weight: bolder;
+    border-radius: 4px;
+    border: 1px solid coral;
+    box-shadow: 2px 2px 2px #ccc;
+    z-index: 10000;
+}
+
+.kok-signUp a,
+.kok-signIn a {
+    font-weight: bolder;
+}
+
+.kok-signUp table,
+.kok-signIn table {
+    width: 340px;
+    border: 1px solid #ccc;
+}
+
+.kok-signUp table,
+.kok-signUp td,
+.kok-signIn table,
+.kok-signIn td {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+.kok-signUp td img,
+.kok-signIn td img {
+    width: 100%;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.kok-signUp td span.signTips,
+.kok-signIn td span.signTips {
+    position: absolute;
+    display: block;
+    width: fit-content;
+    max-width: 87%;
+    top: 30px;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    text-decoration: coral underline;
+    overflow: hidden;
+}
+
+.kok-signUp td input,
+.kok-signIn td input {
+    height: 24px;
+}
+
+.kok-signUp thead,
+.kok-signUp tfoot,
+.kok-signIn thead,
+.kok-signIn tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+.kok-signUp button,
+.kok-signIn button {
+    font-weight: bolder;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #ccc;
+    background-color: coral;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.kok-signUp button:hover,
+.kok-signIn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.kok-signChoose .close,
+.kok-signUp .close,
+.kok-signIn .close {
+    position: absolute;
+    top: -10px;
+    left: -14px;
+    width: fit-content;
+    height: auto;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.kok-signChoose svg,
+.kok-signUp svg,
+.kok-signIn svg {
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.kok-signChoose svg:hover,
+.kok-signUp svg:hover,
+.kok-signIn svg:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.kok-tabs {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.kok-tabs-bottom {}
+
+.kok-tabs-bottom .kok-tabs-container {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    background-color: coral;
+    overflow-x: hidden;
+}
+
+.kok-tabs-bottom .kok-tabs-bottonList {
+    display: block;
+    float: left;
+    width: auto;
+    font-size: 0;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    white-space: nowrap;
+    scrollbar-width: 20px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.kok-tabs-bottom .kok-tabs-bottonList::-webkit-scrollbar {
+    height: 2px;
+}
+
+.kok-tabs-bottom .kok-tabs-bottonList li {
+    display: inline-block;
+    width: fit-content;
+    height: 30px;
+    line-height: 30px;
+    border-left: 1px solid #ccc;
+    font-size: 14px;
+    padding: 0 14px;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.kok-tabs-bottom .kok-tabs-bottonList li:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+.kok-tabs-left .kok-tabs-container {
+    display: block;
+    float: right;
+    width: 85%;
+    height: auto;
+    min-height: 200px;
+    overflow-x: hidden;
+}
+
+.kok-tabs-left .kok-tabs-bottonList {
+    display: block;
+    float: left;
+    width: 15%;
+    font-size: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 14px #ccc;
+    border-radius: 7px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.kok-tabs-left .kok-tabs-bottonList::-webkit-scrollbar {
+    height: 2px;
+}
+
+.kok-tabs-left .kok-tabs-bottonList li {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 30px;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 30px;
+    padding: 4px 0px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: all 0.1s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.kok-tabs-left .kok-tabs-bottonList li:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+[class^="kok-tabs-"] .kok-tabs-bottonList li svg {
+    margin-top: 4px;
+}
+
+[class^="kok-tabs-"] .kok-tabs-bottonList li:hover svg path {
+    fill: #fff;
+}
+
+[class^="kok-title-h"] {
+    word-spacing: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.kok-title-h1 {
+    font-size: 48px;
+}
+
+.kok-title-h2 {
+    font-size: 38px;
+}
+
+.kok-title-h3 {
+    font-size: 28px;
+}
+
+.kok-title-h4 {
+    font-size: 24px;
+}
+
+.kok-title-h5 {
+    font-size: 20px;
+}
+
+.kok-title-h6 {
+    font-size: 16px;
+}
+
+/* Waterfalls flow */
+.kok-waterfalls-flow {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+
+.kok-waterfalls-flow .kok-waterfalls-col {
+    flex: 1;
+    width: 300px;
+    margin-top: 10px;
+    min-height: 100px;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(177, 177, 177);
+    cursor: pointer;
+    /* box-shadow: 1px 1px 14px 1px #ccc; */
+}
+
+/*-- clear float -- */
+.kok-waterfalls-flow .kok-waterfalls-col:before,
+.kok-waterfalls-flow .kok-waterfalls-col:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@keyframes kok-rotate3d-x {
+    from {
+        transform: rotateX(90deg);
+        -webkit-transform: rotateX(90deg);
+        /* Safari 与 Chrome */
+    }
+
+    to {
+        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        /* Safari 与 Chrome */
+    }
+}
+
+@media screen and (max-width:960px) {
+
+    .kok-menu-left,
+    .kok-menu-right {
+        display: none;
+    }
+
+    .kok-menu-center {
+        display: block;
+        position: fixed;
+        width: 45vw;
+        height: 45vw;
+        left: 28vw;
+        transform: rotate(45deg);
+        top: 25%;
+        box-shadow: 1px 1px 14px #fff;
+        background-color: rgba(210, 105, 30, 0.84);
+        z-index: 999;
+    }
+
+    .kok-menu-close {
+        border: 60px solid chocolate;
+        border-right: 60px solid transparent;
+        border-left: 60px solid transparent;
+        border-top: 60px solid transparent;
+    }
+
+    .kok-menu-close svg {
+        margin-top: 28px;
+        width: 20px;
+        height: 20px;
+        margin-left: -9px;
+    }
+
+    .kok-article {
+        width: 90%;
+    }
+
+    .kok-article .kok-article-content>.kok-article-img {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+
+    [class^="kok-container"] {
+        width: 100%;
+    }
+
+    .kok-navication {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .kok-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .kok-waterfall-width-column {
+        column-count: 3;
+    }
+
+    .kok-col-row .kok-col-auto {
+        width: 46%;
+        max-height: 250px;
+        margin-top: 8px;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 414px) {
+    .kok-col-row .kok-col-auto {
+        width: 45%;
+        margin-top: 8px;
+        margin-left: 3%;
+    }
+}
+
+@media (min-width:414px) and (max-width: 430px) {
+    .kok-col-row .kok-col-auto {
+        width: 30%;
+        max-height: 120px;
+        margin-top: 8px;
+        margin-left: 3%;
+    }
+}
+
+@media (min-width:430px) and (max-width: 574px) {
+    .kok-col-row .kok-col-auto {
+        width: 30%;
+        max-height: 250px;
+        margin-top: 8px;
+        margin-left: 3%;
+    }
+}
+
+@media (min-width:574px) and (max-width: 992px) {
+    .waterfall-width-column {
+        column-count: 4;
+    }
+
+    .kok-col-row .kok-col-auto {
+        width: 21%;
+        max-height: 250px;
+        margin-top: 8px;
+        margin-left: 3%;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1400px) {
+    .waterfall-width-column {
+        column-count: 6;
+    }
+
+    .kok-col-row .kok-col-auto {
+        width: 16%;
+        max-height: 250px;
+        margin-top: 8px;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width:992px) {
+    .kok-col-row .kok-col-4 {
+        width: 100%;
+    }
+
+    .kok-col-row .kok-col-8 {
+        width: 100%;
+    }
+}
