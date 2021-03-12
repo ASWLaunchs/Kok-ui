@@ -25,7 +25,8 @@
 }
 
 .editor-leftNavToolBar li:hover {
-    background-color: coral;
+    color: #fff;
+    background-color: black;
 }
 
 .editor-leftNavToolBar li svg {
@@ -35,9 +36,8 @@
     margin-top: 4px;
 }
 
-/* preview close btn do not display */
-.editor-leftNavToolBar li:nth-last-child(3) svg:nth-last-child(2) {
-    display: none;
+.editor-leftNavToolBar li:hover svg path {
+    fill: #fff;
 }
 
 .editor-leftNavToolBar li span {
