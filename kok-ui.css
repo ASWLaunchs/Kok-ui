@@ -523,12 +523,45 @@ a {
     clear: both;
 }
 
+/* dialog */
+[class^="kok-dialog"] {
+    position: fixed;
+    top: 26vh;
+    left: 40%;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 12px 2px #ccc;
+    border-radius: 7px;
+    border: 2px solid;
+    z-index: 9999;
+}
+
+.kok-dialog-min {
+    max-width: 260px;
+    height: auto;
+}
+
+.kok-dialog-max {
+    min-width: 300px;
+    max-width: 400px;
+    height: auto;
+}
+
+
 /* kok input component */
 .kok-input-search {
     height: 24px;
     border-radius: 16px;
     padding: 2px 8px;
     outline: none;
+}
+
+.kok-input-file {
+    line-height: 24px;
+    height: 24px;
+    border-radius: 7px;
+    padding: 2px 8px;
+    background-color: coral;
 }
 
 #kok-refresh {
@@ -563,126 +596,6 @@ a {
     /* Safari and Chrome */
     z-index: 9999;
 }
-
-
-.kok-menu {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    /* Safari and Chrome */
-    perspective: 150;
-    -webkit-perspective: 800;
-    /* Safari and Chrome */
-    z-index: 9999;
-}
-
-
-.kok-menu .kok-menu-left {
-    position: fixed;
-    left: -16%;
-    width: 450px;
-    height: 450px;
-    top: 20%;
-    transform: rotate3d(1, 1, 0, -15deg);
-    background-color: rgba(210, 105, 30, 0.84);
-    box-shadow: 1px 1px 14px rgb(255, 255, 255);
-    z-index: 999;
-}
-
-.kok-menu .kok-menu-right {
-    position: fixed;
-    right: -16%;
-    width: 450px;
-    height: 450px;
-    top: 20%;
-    transform: rotate3d(1, 1, 0, 15deg);
-    background-color: rgba(210, 105, 30, 0.84);
-    box-shadow: 1px 1px 14px #fff;
-    z-index: 999;
-}
-
-.kok-menu .kok-menu-center {
-    display: none;
-}
-
-.kok-menu .kok-menu-button1 {
-    display: block;
-    height: 40px;
-    width: 600px;
-    margin-top: 84px;
-    color: coral;
-    letter-spacing: 0.5em;
-    border-radius: 8px;
-    font-weight: bolder;
-    padding: 4px;
-    text-align: right;
-    background-color: black;
-    border-bottom: 2px solid cyan;
-    transform: rotate3d(0, 1, 0, -10deg);
-    transition: all 0.3s ease-in-out;
-}
-
-.kok-menu .kok-menu-button1:hover {
-    color: black;
-    background-color: chocolate;
-    box-shadow: 2px 2px 12px #fff;
-    transform: rotate3d(0, 1, 0, -30deg) translateX(150px);
-}
-
-.kok-menu .kok-menu-button2 {
-    display: block;
-    float: right;
-    height: 40px;
-    width: 600px;
-    margin-top: 82px;
-    margin-right: 10px;
-    color: coral;
-    letter-spacing: 0.5em;
-    border-radius: 8px;
-    font-weight: bolder;
-    padding: 4px;
-    text-align: left;
-    background-color: black;
-    border-bottom: 2px solid cyan;
-    transform: rotate3d(0, 1, 0, -10deg);
-    transition: all 0.3s ease-in-out;
-}
-
-.kok-menu .kok-menu-button2:hover {
-    color: black;
-    background-color: chocolate;
-    box-shadow: 2px 2px 12px #fff;
-    transform: rotate3d(0, 1, 0, -30deg) translateX(-150px);
-}
-
-.kok-menu .kok-menu-close {
-    position: fixed;
-    width: 0;
-    height: 0;
-    left: 43%;
-    border: 100px solid chocolate;
-    border-right: 100px solid transparent;
-    border-left: 100px solid transparent;
-    border-top: 100px solid transparent;
-    bottom: 0;
-    cursor: pointer;
-}
-
-.kok-menu .kok-menu-close svg {
-    margin-top: 40px;
-    margin-left: -23px;
-    transition: all 0.3s ease-in-out;
-}
-
-.kok-menu .kok-menu-close:hover svg {
-    color: tomato;
-    transform: rotate(90deg);
-}
-
 
 /*=============================================
 	=    		 navication Setting			      =
@@ -774,17 +687,27 @@ a {
 	=    		 leftPart and rightPart Setting			      =
 =============================================*/
 
-[class^="kok-notice"] {
+#kok-notice {
     position: fixed;
+    display: block;
     top: 10px;
     right: 8px;
+    max-width: 200px;
+    height: auto;
+    z-index: 9999;
+}
+
+[class^="kok-notice"] {
+    position: relative;
     display: block;
+    float: right;
     width: fit-content;
-    height: 18px;
+    min-height: 18px;
+    word-wrap: break-word;
     padding: 6px;
+    margin-top: 4px;
     color: #fff;
     font-weight: bolder;
-    background-color: red;
     box-shadow: 2px 2px 10px 1px #888;
     border-radius: 4px;
     opacity: 1;
@@ -794,21 +717,21 @@ a {
 
 .kok-notice-warn {
     color: #fff;
-    background-color: rgb(238, 76, 76);
+    background-color: rgba(238, 76, 76, 0.84);
 }
 
 .kok-notice-info {
     color: #fff;
-    background-color: rgb(0, 195, 255);
+    background-color: rgba(0, 195, 255, 0.84);
 }
 
 .kok-notice-successed {
     color: #fff;
-    background-color: rgb(57, 226, 107);
+    background-color: rgba(57, 226, 107, 0.84);
 }
 
 /*=============================================
-	=    		 left bottom Text Setting	 =
+	=    	left bottom Text Setting	 =
 =============================================*/
 .kok-leftBottomText {
     position: fixed;
@@ -1026,15 +949,6 @@ a {
     top: 4px;
 }
 
-/* 3d */
-.kok-rotate3d-x {
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    /* Safari 与 Chrome */
-    transition: all ease-in-out 0.7s;
-    animation: kok-rotate3d-x ease-in-out 1000ms;
-}
-
 .kok-list {}
 
 .kok-list .kok-list-head {
@@ -1199,33 +1113,6 @@ a {
 
 .kok-signUp button:hover,
 .kok-signIn button:hover {
-    transform: translateY(-2px);
-    box-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
-
-.kok-signChoose .close,
-.kok-signUp .close,
-.kok-signIn .close {
-    position: absolute;
-    top: -10px;
-    left: -14px;
-    width: fit-content;
-    height: auto;
-    cursor: pointer;
-    z-index: 10001;
-}
-
-.kok-signChoose svg,
-.kok-signUp svg,
-.kok-signIn svg {
-    border-radius: 50%;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-.kok-signChoose svg:hover,
-.kok-signUp svg:hover,
-.kok-signIn svg:hover {
     transform: translateY(-2px);
     box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
@@ -1395,54 +1282,29 @@ a {
     clear: both;
 }
 
-@keyframes kok-rotate3d-x {
-    from {
-        transform: rotateX(90deg);
-        -webkit-transform: rotateX(90deg);
-        /* Safari 与 Chrome */
-    }
+/* ------------- key ------------ */
+[class^="kok-"] .kok-key-close {
+    position: absolute;
+    top: -10px;
+    left: -14px;
+    width: fit-content;
+    height: auto;
+    cursor: pointer;
+    z-index: 10001;
+}
 
-    to {
-        transform: rotateX(0deg);
-        -webkit-transform: rotateX(0deg);
-        /* Safari 与 Chrome */
-    }
+[class^="kok-"] .kok-key-close svg {
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+[class^="kok-"] .kok-key-close svg:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 @media screen and (max-width:960px) {
-
-    .kok-menu-left,
-    .kok-menu-right {
-        display: none;
-    }
-
-    .kok-menu-center {
-        display: block;
-        position: fixed;
-        width: 45vw;
-        height: 45vw;
-        left: 28vw;
-        transform: rotate(45deg);
-        top: 25%;
-        box-shadow: 1px 1px 14px #fff;
-        background-color: rgba(210, 105, 30, 0.84);
-        z-index: 999;
-    }
-
-    .kok-menu-close {
-        border: 60px solid chocolate;
-        border-right: 60px solid transparent;
-        border-left: 60px solid transparent;
-        border-top: 60px solid transparent;
-    }
-
-    .kok-menu-close svg {
-        margin-top: 28px;
-        width: 20px;
-        height: 20px;
-        margin-left: -9px;
-    }
-
     .kok-article {
         width: 90%;
     }
