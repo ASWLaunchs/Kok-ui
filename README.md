@@ -1,4 +1,4 @@
-![kok-ui logo](logo.png)
+<p align="center"><img src="logo.png"/></p>
 
-kok-ui is a simple and fast front-end css framework .
+<p align="center"<b>kok-ui is a simple and fast front-end css framework .</b></p>
 
